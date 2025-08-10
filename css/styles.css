@@ -1,0 +1,46 @@
+/* 
+  Order: tags, classes, IDs (alphabetical within each group).
+  Please keep new styles in order!
+
+  Pallette:
+    #e68731 - orange
+    #1d5366 - dark teal
+    #4ba28a - light teal
+*/  
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 50%;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format('truetype');
+}
+
+section {
+  text-align: center;
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-family: 'montserrat';
+}
+
+header img {
+  max-width: 10%;
+}
+
