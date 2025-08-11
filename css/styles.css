@@ -6,18 +6,38 @@
     #e68731 - orange
     #1d5366 - dark teal
     #4ba28a - light teal
-*/  
+    #f9f6ee - antique white
+*/ 
+
+/****************************************************/
+/*********************** TAGS ***********************/
+/****************************************************/
 
 * {
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
 }
 
 body {
-  margin: auto;
-  text-align: center;
+  display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  background-color: #f9f6ee;
+  background-image: url(../images/light-streak.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+
+header img {
+  margin-top: 3%;
+  max-width: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 main {
@@ -30,17 +50,43 @@ main {
 }
 
 section {
-  text-align: center;
-  margin-left: auto;
-  display: grid;
-  place-items: center;
+  margin: 5% auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
 }
 
-h1 {
-  font-family: 'montserrat';
+h1, h2 {
+  margin-top: 3%;
 }
 
-header img {
-  max-width: 10%;
+p {
+  margin-top: 5%;
 }
 
+ul {
+    list-style-type: none;
+}
+
+/****************************************************/
+/********************* CLASSES **********************/
+/****************************************************/
+
+.first {
+  padding: 5%;
+  background-color: #e68731;
+}
+
+.second {
+  padding: 5%;
+  background-color: #1d5366;
+  color: #f9f6ee;
+}
+
+.third {
+  padding: 5%;
+  background-color: #4ba28a;
+}
+
+/****************************************************/
+/*********************** IDS ************************/
+/****************************************************/
