@@ -19,6 +19,10 @@
   font-family: 'montserrat', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   display:flex;
   flex-direction: column;
@@ -60,7 +64,7 @@ h1, h2 {
 }
 
 p {
-  margin-top: 5%;
+  margin: 5%;
 }
 
 ul {
@@ -76,10 +80,18 @@ ul {
   background-color: #e68731;
 }
 
+.first a {
+  color: #f9f6ee;
+}
+
 .second {
   padding: 5%;
   background-color: #1d5366;
   color: #f9f6ee;
+}
+
+.second a {
+  color: #e68731;
 }
 
 .third {
