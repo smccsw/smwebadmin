@@ -26,10 +26,10 @@ body {
   align-items: center;
   text-align: center;
   background-color: #f9f6ee;
-  background-image: url(../images/light-streak.png);
+  background-image: url(../images/light-streak-2.png);
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position-x: center;
+  background-size: 15% 100%;
+  background-position-x: 25%;
   background-attachment: fixed;
 }
 
