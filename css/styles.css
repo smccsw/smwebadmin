@@ -30,11 +30,11 @@ body {
   align-items: center;
   text-align: center;
   background-color: #fff;
-  background-image: url(../images/light-streak-2.png);
+  /* background-image: url(../images/light-streak-2.png);
   background-repeat: no-repeat;
   background-size: 10% 100%;
   background-position-x: 25%;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 
@@ -46,6 +46,10 @@ header img {
 
 main {
   max-width: 50%;
+  background-image: url(../images/hex-2048x2048-no-background.png);
+  background-size: 30%;
+  background-attachment: fixed;
+  /* background-repeat: no-repeat; */
 }
 
 @font-face {
@@ -56,9 +60,9 @@ main {
 section {
   margin: 5% auto;
   background-color: #fff;
-  background-image: url(../images/hex-2048x2048-no-background.png);
+  /* background-image: url(../images/hex-2048x2048-no-background.png);
   background-size: 30%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
 }
@@ -81,17 +85,17 @@ ul {
 
 .first {
   padding: 5%;
-  background-color: #e68731;
+  /* background-color: #e68731; */
 }
 
 .first a {
-  color: #f9f6ee;
+  /* color: #f9f6ee; */
 }
 
 .second {
   padding: 5%;
-  background-color: #1d5366;
-  color: #f9f6ee;
+  /* background-color: #1d5366;
+  color: #f9f6ee; */
 }
 
 .second a {
@@ -100,9 +104,47 @@ ul {
 
 .third {
   padding: 5%;
-  background-color: #4ba28a;
+  /* background-color: #4ba28a; */
 }
 
 /****************************************************/
 /*********************** IDS ************************/
 /****************************************************/
+
+/* --- Pure CSS alternating scroll-in: odd from right, even from left --- */
+
+/* Fallback (no scroll-linked support) */
+section { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  section { opacity: 1 !important; transform: none !important; animation: none !important; }
+}
+
+@supports (animation-timeline: view()) {
+  /* Distance you want sections to start from */
+  :root { --reveal-x: 100px; --reveal-y: 100px; }
+
+  /* Keyframes use the per-section custom property for X direction */
+  @keyframes slideInAlt {
+    from { opacity: 0; transform: translate(var(--dir-x, var(--reveal-x)), var(--reveal-y)); }
+    to   { opacity: 1; transform: translate(0, 0); }
+  }
+
+  /* Base for all sections */
+  section {
+    opacity: 0;
+    transform: translate(var(--dir-x, var(--reveal-x)), var(--reveal-y));
+    view-timeline-name: --reveal;
+    view-timeline-axis: block;
+    animation: slideInAlt 1s ease-out both;
+    animation-timeline: --reveal;
+    /* Animate as each section enters and starts covering the viewport */
+    animation-range: entry 0% cover 40%;
+  }
+
+  /* Odd sections: from bottom-right (positive X) */
+  section:nth-of-type(odd)  { --dir-x: var(--reveal-x); }
+
+  /* Even sections: from bottom-left (negative X) */
+  section:nth-of-type(even) { --dir-x: calc(var(--reveal-x) * -1); }
+}
