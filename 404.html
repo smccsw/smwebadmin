@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>404</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Page not found — SM Webman</title>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="SM Webman logo">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="SM Webman home">
+        <img src="images/smwebman-2048x2048.svg" alt="SM Webman" width="96" height="96" />
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why">Why us</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="first">
-      <p>Sorry, the page you're looking for can't be found. Click <a href="index.html">here</a> to return home.</p>
-    </section>
 
+  <main class="page-content">
+    <div class="content-block">
+      <h2>Page not found</h2>
+      <p>Sorry, the page you're looking for isn’t here. <a href="index.html">Return home</a>.</p>
+    </div>
   </main>
 
-
-      
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><a href="cookie-policy.html">Cookie policy</a></p>
+      <p class="footer-copy">© SM Webman</p>
+    </div>
+  </footer>
 </body>
 </html>

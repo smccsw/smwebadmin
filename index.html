@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>SM Webman</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SM Webman — clean, simple websites for small businesses and sole traders. Brochure sites, domains, hosting. Local, human, no fluff." />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>SM Webman — Simple Web Design for Small Business</title>
 </head>
 <body>
-  <header>
-    <img src="images/smwebman-1519x1519.png" alt="SM Webman logo">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="SM Webman home">
+        <img src="images/smwebman-2048x2048.svg" alt="SM Webman" width="96" height="96" />
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="first">
-      <h1>Brochure Site Specialists</h1>
-      <p>If you don't need pages of content, eCommerce, or booking systems — and you'd rather focus on running your business than learning how to use WordPress — get in touch.</p>
-      <p>We <em>can</em> build online shops and integrate calendars, but we won’t push anything you don’t need or want to pay for. The choice is yours.</p>
-      <p>We're all about clean, unfussy websites — easy on the eye and easy to use. Sites that work for your visitors, and work for you.</p>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>Simple web design for small business</h1>
+        <p class="hero-lead">Brochure sites that look good and work. No bloat, no lock-in — just a clear online presence you own.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="#services" class="btn btn-secondary">What we do</a>
+        </div>
+      </div>
     </section>
 
-  <section class="second">
-    <h2>Your online presence, managed</h2>
+    <section id="services" class="section section--services">
+      <div class="section-inner">
+        <h2>What we offer</h2>
+        <p class="section-intro">We don’t push eCommerce or booking systems unless you need them. Focus on running your business; we’ll handle the web.</p>
+        <ul class="services-grid">
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">◆</span>
+            <h3>Brochure websites</h3>
+            <p>Clean, fast sites that tell your story and get people to contact you. Easy to update when you need to.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">◆</span>
+            <h3>Domain & hosting</h3>
+            <p>Your own domain and reliable hosting. You own it; we keep it running so you’re not at the mercy of big platforms.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">◆</span>
+            <h3>Simple CMS</h3>
+            <p>Edit text and images without touching code. No WordPress overwhelm — only what you need.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <p>Services include:</p>
-    <ul>
-      <li><strong>Domain registration</strong> – your plot of land on the internet</li>
-      <li><strong>Hosting</strong> – building a home on your plot</li>
-      <li><strong>Content Management Systems</strong> – the furniture and decoration inside</li>
-    </ul>
-  </section>
+    <section id="why" class="section section--why">
+      <div class="section-inner">
+        <h2>Why go local?</h2>
+        <p class="section-intro">When something goes wrong, you want a human on your side — not a support bot or a forum. We’re here, we’re local, and we’re your safety net online.</p>
+        <blockquote class="pullquote">
+          If you don’t own your online presence, you risk getting lost in a support black hole. Don’t leave your business at their mercy.
+        </blockquote>
+      </div>
+    </section>
 
-  <section class="third">
-    <h2>What do you rely on to market your business online?</h2>
-
-    <p>Big tech platforms are putting more trust in AI and algorithms and less in people to keep things running. One day that might work brilliantly - but we’re not there yet.</p>
-
-    <p>If you don’t own your online presence, there’s a real risk you’ll end up lost in a support black hole when something goes wrong. Don’t leave your business at their mercy. We’re local, we’re human, and we’re your safety net online.</p>
-  </section>
-
-  <footer>
-    <h3>Contact Me</h3>
-    <p>07624360883</p>
-  </footer>
-
+    <section id="contact" class="section section--cta">
+      <div class="section-inner">
+        <h2>Let’s talk</h2>
+        <p>Tell us about your business and what you’d like from a website. No pressure, no jargon.</p>
+        <div class="contact-actions">
+          <a href="tel:07624360883" class="btn btn-primary">Call 07624 360883</a>
+          <p class="contact-note">Or drop us a line — we’ll get back to you.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><a href="cookie-policy.html">Cookie policy</a></p>
+      <p class="footer-copy">© SM Webman</p>
+    </div>
+  </footer>
 
-      
+  <script src="js/main.js" defer></script>
 </body>
 </html>
