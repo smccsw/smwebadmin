@@ -13,8 +13,12 @@
       <a href="index.html" class="logo" aria-label="SM Webman home">
         <img src="images/smwebman-2048x2048.svg" alt="SM Webman" width="96" height="96" />
       </a>
-      <nav class="nav" aria-label="Main">
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-inner" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Main">
         <a href="index.html#services">Services</a>
+        <a href="index.html#showcase">What you get</a>
         <a href="index.html#why">Why us</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -31,8 +35,10 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p><a href="cookie-policy.html">Cookie policy</a></p>
-      <p class="footer-copy">© SM Webman</p>
+      <p class="footer-copy">© <span id="copyright-year"></span> SM Webman. All rights reserved.</p>
     </div>
   </footer>
+  <script>document.getElementById('copyright-year').textContent=new Date().getFullYear();</script>
+  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');if(t&&n){t.addEventListener('click',function(){var o=document.body.classList.toggle('nav-open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});});}})();</script>
 </body>
 </html>

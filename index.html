@@ -16,8 +16,12 @@
       <a href="index.html" class="logo" aria-label="SM Webman home">
         <img src="images/smwebman-2048x2048.svg" alt="SM Webman" width="96" height="96" />
       </a>
-      <nav class="nav" aria-label="Main">
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-inner" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Main">
         <a href="#services">Services</a>
+        <a href="#showcase">What you get</a>
         <a href="#why">Why us</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -28,14 +32,32 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-content">
-        <h1>Simple web design for small business</h1>
+        <p class="hero-kicker">You run the business. We run the web.</p>
+        <h1><span class="hero-line">Simple web design.</span> <span class="hero-line">For small business.</span></h1>
         <p class="hero-lead">Brochure sites that look good and work. No bloat, no lock-in — just a clear online presence you own.</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Get in touch</a>
           <a href="#services" class="btn btn-secondary">What we do</a>
         </div>
+        <a href="#services" class="hero-scroll-cue" aria-label="Scroll to reveal the rest of the page">
+          <span class="hero-scroll-text">Scroll to reveal</span>
+          <span class="hero-scroll-icon" aria-hidden="true">↓</span>
+        </a>
       </div>
+      <div class="hero-shapes" aria-hidden="true">
+        <span class="shape-wrap shape-wrap--1"><span class="shape shape--1"></span></span>
+        <span class="shape-wrap shape-wrap--2"><span class="shape shape--2"></span></span>
+        <span class="shape-wrap shape-wrap--3"><span class="shape shape--3"></span></span>
+        <span class="shape-wrap shape-wrap--4"><span class="shape shape--4"></span></span>
+        <span class="shape-wrap shape-wrap--5"><span class="shape shape--5"></span></span>
+        <span class="shape-wrap shape-wrap--6"><span class="shape shape--6"></span></span>
+      </div>
+      <div class="hero-spotlight" aria-hidden="true"></div>
     </section>
+
+    <div class="reveal-curtain" aria-hidden="true">
+      <span class="reveal-curtain-hint">Scroll down to continue</span>
+    </div>
 
     <section id="services" class="section section--services">
       <div class="section-inner">
@@ -43,21 +65,76 @@
         <p class="section-intro">We don’t push eCommerce or booking systems unless you need them. Focus on running your business; we’ll handle the web.</p>
         <ul class="services-grid">
           <li class="service-card">
-            <span class="service-icon" aria-hidden="true">◆</span>
+            <span class="service-num" aria-hidden="true">01</span>
             <h3>Brochure websites</h3>
             <p>Clean, fast sites that tell your story and get people to contact you. Easy to update when you need to.</p>
           </li>
           <li class="service-card">
-            <span class="service-icon" aria-hidden="true">◆</span>
+            <span class="service-num" aria-hidden="true">02</span>
             <h3>Domain & hosting</h3>
             <p>Your own domain and reliable hosting. You own it; we keep it running so you’re not at the mercy of big platforms.</p>
           </li>
           <li class="service-card">
-            <span class="service-icon" aria-hidden="true">◆</span>
+            <span class="service-num" aria-hidden="true">03</span>
             <h3>Simple CMS</h3>
             <p>Edit text and images without touching code. No WordPress overwhelm — only what you need.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section id="showcase" class="section section--showcase">
+      <div class="section-inner">
+        <h2>What you get</h2>
+        <p class="section-intro">A site that works for your visitors and for you — clear, fast, and yours.</p>
+        <div class="showcase-grid">
+          <a href="https://thereparatory.co.uk" class="mockup-card mockup-card--link" target="_blank" rel="noopener noreferrer">
+            <div class="mockup-chrome">
+              <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+            </div>
+            <div class="mockup-screen mockup-screen--screenshot">
+              <img src="images/screenshots/thereparatory.gif" alt="The Reparatory website — scroll preview" class="mockup-screenshot" width="600" height="400" loading="lazy" onerror="this.parentElement.classList.add('mockup-screen--fallback')" />
+              <div class="mockup-screenshot-fallback" aria-hidden="true">
+                <span class="mockup-fallback-title">The Reparatory</span>
+                <span class="mockup-fallback-url">thereparatory.co.uk</span>
+              </div>
+            </div>
+            <span class="mockup-overlay">
+              <span class="mockup-overlay-text">Click to visit</span>
+              <span class="mockup-overlay-url">thereparatory.co.uk</span>
+            </span>
+          </a>
+          <a href="#" class="mockup-card mockup-card--link" aria-disabled="true" onclick="return false;">
+            <div class="mockup-chrome">
+              <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+            </div>
+            <div class="mockup-screen">
+              <div class="mockup-placeholder mockup-placeholder--title"></div>
+              <div class="mockup-placeholder mockup-placeholder--line"></div>
+              <div class="mockup-placeholder mockup-placeholder--line mockup-placeholder--short"></div>
+              <div class="mockup-placeholder mockup-placeholder--line mockup-placeholder--short"></div>
+            </div>
+            <span class="mockup-overlay">
+              <span class="mockup-overlay-text">More coming soon</span>
+              <span class="mockup-overlay-url">—</span>
+            </span>
+          </a>
+          <a href="#" class="mockup-card mockup-card--link" aria-disabled="true" onclick="return false;">
+            <div class="mockup-chrome">
+              <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+            </div>
+            <div class="mockup-screen">
+              <div class="mockup-placeholder mockup-placeholder--title"></div>
+              <div class="mockup-placeholder mockup-placeholder--line"></div>
+              <div class="mockup-placeholder mockup-placeholder--line mockup-placeholder--short"></div>
+              <div class="mockup-placeholder mockup-placeholder--line mockup-placeholder--short"></div>
+            </div>
+            <span class="mockup-overlay">
+              <span class="mockup-overlay-text">More coming soon</span>
+              <span class="mockup-overlay-url">—</span>
+            </span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -85,11 +162,13 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
+      <p class="footer-tagline">Local. Human. Here.</p>
       <p><a href="cookie-policy.html">Cookie policy</a></p>
-      <p class="footer-copy">© SM Webman</p>
+      <p class="footer-copy">© <span id="copyright-year"></span> SM Webman. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script>document.getElementById('copyright-year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
