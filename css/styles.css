@@ -1,6 +1,6 @@
 /*
   SM Webman — clean, stylish one-pager
-  Palette: #e68731 (orange), #1d5366 (dark teal), #4ba28a (light teal), #f9f6ee (antique white)
+  Palette: #e07d2e (orange), #1d5366 (dark teal), #163d4d (footer teal), #4ba28a (light teal), #fafaf9 (off-white), #f9f6ee (light text on dark)
   Order: tags, classes, IDs (alphabetical within groups).
 */
 
@@ -29,7 +29,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: #1d5366;
-  background: #fff;
+  background: linear-gradient(180deg, #fafaf9 0%, #fcfcfb 50%, #fff 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,11 +42,11 @@ a {
 }
 
 a:hover {
-  color: #e68731;
+  color: #e07d2e;
 }
 
 a:focus-visible {
-  outline: 2px solid #e68731;
+  outline: 2px solid #e07d2e;
   outline-offset: 4px;
 }
 
@@ -107,9 +107,9 @@ blockquote {
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(249, 246, 238, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(29, 83, 102, 0.1);
+  background: rgba(250, 250, 249, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(29, 83, 102, 0.08);
   overflow: visible;
 }
 
@@ -158,9 +158,10 @@ blockquote {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(75, 162, 138, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(230, 135, 49, 0.08) 0%, transparent 45%),
-    linear-gradient(180deg, #f9f6ee 0%, #fff 100%);
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(75, 162, 138, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 85% 85%, rgba(224, 125, 46, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 15% 70%, rgba(224, 125, 46, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #fafaf9 0%, #fcfcfb 40%, #fff 100%);
   pointer-events: none;
 }
 
@@ -209,13 +210,13 @@ blockquote {
 }
 
 .btn-primary {
-  background: #e68731;
+  background: #e07d2e;
   color: #fff;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background: #d97a28;
+  background: #c96f22;
 }
 
 .btn-secondary {
@@ -257,7 +258,7 @@ blockquote {
 
 /* Services grid */
 .section--services {
-  background: #f9f6ee;
+  background: #fafaf9;
 }
 
 .services-grid {
@@ -313,7 +314,7 @@ blockquote {
 
 /* CTA section */
 .section--cta {
-  background: linear-gradient(180deg, #f9f6ee 0%, #fff 100%);
+  background: linear-gradient(180deg, #fafaf9 0%, #fcfcfb 60%, #fff 100%);
 }
 
 .contact-actions {
@@ -333,7 +334,7 @@ blockquote {
 .site-footer {
   margin-top: auto;
   padding: 2rem 1.5rem;
-  background: #1d5366;
+  background: #163d4d;
   color: #f9f6ee;
   text-align: center;
 }
@@ -348,7 +349,7 @@ blockquote {
 }
 
 .site-footer a:hover {
-  color: #e68731;
+  color: #e07d2e;
 }
 
 .footer-copy {
