@@ -1,8 +1,6 @@
 # smwebman
 
-Pallette
-#e07d2e (orange)
-#1d5366 (dark teal)
-#163d4d (footer teal)
-#4ba28a (light teal)
-#f9f6ee (antique white)
+Dark theme palette:
+- #0f1419 (bg), #1a2328 (surface), #232f36 (elevated)
+- #e07d2e (orange accent), #4ba28a (teal accent)
+- #e6e8eb (text primary)
