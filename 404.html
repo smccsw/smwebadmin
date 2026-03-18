@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Page not found — SM Webman</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="SM Webman home">
+        <img src="images/smwebman-2048x2048.svg" alt="SM Webman" width="96" height="96" />
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-inner" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Main">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#showcase">What you get</a>
+        <a href="index.html#why">Why us</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="content-block">
+      <h2>Page not found</h2>
+      <p>Sorry, the page you're looking for isn’t here. <a href="index.html">Return home</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><a href="cookie-policy.html">Cookie policy</a></p>
+      <p class="footer-copy">© <span id="copyright-year"></span> SM Webman. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('copyright-year').textContent=new Date().getFullYear();</script>
+  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');if(t&&n){t.addEventListener('click',function(){var o=document.body.classList.toggle('nav-open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});});}})();</script>
+</body>
+</html>
