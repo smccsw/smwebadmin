@@ -100,4 +100,23 @@
       }
     });
   });
+
+  // Contact details obfuscation (injected at runtime)
+  var emailElement = document.getElementById('email');
+  if (emailElement) {
+    var emailUser = 'hello';
+    var emailDomain = 'smwebman.co.uk';
+    var emailAddress = emailUser + '@' + emailDomain;
+    emailElement.innerHTML =
+      '<a href="mailto:' + emailAddress + '">' + emailAddress + '</a>';
+  }
+
+  var phoneElement = document.getElementById('phone');
+  if (phoneElement) {
+    var phoneHref = 'tel:' + '07624' + '360883';
+    phoneElement.innerHTML =
+      '<a class="btn btn-primary" href="' + phoneHref + '">' +
+      'Call ' + '07624' + ' ' + '360883' +
+      '</a>';
+  }
 })();
