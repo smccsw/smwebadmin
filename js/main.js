@@ -15,20 +15,6 @@
   }
   initHero();
 
-  // Scroll-to-reveal: first scroll removes curtain and reveals rest of page
-  var curtain = document.querySelector('.reveal-curtain');
-  if (curtain && !reducedMotion) {
-    var revealThreshold = 60;
-    function checkReveal() {
-      if (window.scrollY >= revealThreshold) {
-        document.body.classList.add('reveal-complete');
-        window.removeEventListener('scroll', checkReveal, { passive: true });
-      }
-    }
-    window.addEventListener('scroll', checkReveal, { passive: true });
-    checkReveal();
-  }
-
   // Scroll-linked: fade hero shapes when scrolled past hero
   var hero = document.querySelector('.hero');
   if (hero && !reducedMotion) {
@@ -105,7 +91,7 @@
   var emailElement = document.getElementById('email');
   if (emailElement) {
     var emailUser = 'hello';
-    var emailDomain = 'smwebman.co.uk';
+    var emailDomain = 'smwebadmin.com';
     var emailAddress = emailUser + '@' + emailDomain;
     emailElement.innerHTML =
       '<a href="mailto:' + emailAddress + '">' + emailAddress + '</a>';

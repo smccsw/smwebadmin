@@ -1,4 +1,4 @@
-# smwebman
+# SM Web & Admin
 
 Dark theme palette:
 - #0f1419 (bg), #1a2328 (surface), #232f36 (elevated)
