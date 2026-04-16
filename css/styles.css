@@ -133,6 +133,7 @@ blockquote {
 }
 
 .logo {
+  display: inline-block;
   line-height: 0;
   margin-top: -0.25rem; /* nudge up so bar sits at top of logo */
   width: 112px;
