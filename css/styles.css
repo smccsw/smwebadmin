@@ -136,11 +136,13 @@ blockquote {
   display: inline-block;
   line-height: 0;
   margin-top: -0.25rem; /* nudge up so bar sits at top of logo */
-  width: 112px;
-  height: 112px;
+  width: 176px;
+  height: 88px;
   border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(75, 162, 138, 0.18);
   overflow: hidden;
 }
 
@@ -153,9 +155,9 @@ blockquote {
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  transform: translateY(0px) scale(1.06);
+  transform: scale(1.02);
   transform-origin: center;
   /* no negative margin; logo simply extends below header */
 }
@@ -1115,12 +1117,12 @@ button.btn.btn-primary {
   }
 
   .logo img {
-    transform: translateY(2px) scale(1.06);
+    transform: scale(1.02);
   }
 
   .logo {
-    width: 140px;
-    height: 140px;
+    width: 220px;
+    height: 110px;
     border-radius: 14px;
   }
 }
@@ -1149,12 +1151,12 @@ button.btn.btn-primary {
   }
 
   .logo img {
-    transform: translateY(0px) scale(1.06);
+    transform: scale(1.02);
   }
 
   .logo {
-    width: 84px;
-    height: 84px;
+    width: 160px;
+    height: 80px;
     border-radius: 8px;
   }
 
