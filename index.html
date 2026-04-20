@@ -8,11 +8,27 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-65TVHBEWNF');
   </script>
   <meta name="google-site-verification" content="YmsCOtMnQNqX1y_f07VAyROQyqF5480UpU-FmcpBqG8" />
   <meta name="description" content="SM Web &amp; Admin — clean, simple websites for small businesses and sole traders. Brochure sites, domains, hosting. Local, human, no fluff." />
+  <link rel="canonical" href="https://smwebadmin.com/" />
+  <meta name="theme-color" content="#0f1419" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smwebadmin.com/" />
+  <meta property="og:title" content="SM Web &amp; Admin — Simple Web Design for Small Business" />
+  <meta property="og:description" content="SM Web &amp; Admin — clean, simple websites for small businesses and sole traders. Brochure sites, domains, hosting. Local, human, no fluff." />
+  <meta property="og:image" content="https://smwebadmin.com/images/logo.svg" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SM Web &amp; Admin — Simple Web Design for Small Business" />
+  <meta name="twitter:description" content="SM Web &amp; Admin — clean, simple websites for small businesses and sole traders. Brochure sites, domains, hosting. Local, human, no fluff." />
+  <meta name="twitter:image" content="https://smwebadmin.com/images/logo.svg" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -168,11 +184,27 @@
     <div class="footer-inner">
       <p class="footer-tagline">Local. Human. Here.</p>
       <p><a href="cookie-policy.html">Cookie policy</a></p>
+      <p><a href="#" data-cookie-action="settings">Cookie settings</a></p>
       <p class="footer-copy">© <span id="copyright-year"></span> SM Web &amp; Admin. All rights reserved.</p>
     </div>
   </footer>
 
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie preferences" hidden>
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__title">Cookies</p>
+      <p class="cookie-banner__text">
+        We use optional analytics cookies (Google Analytics) to understand site usage. You can accept or reject analytics cookies.
+        <a href="cookie-policy.html">Read our cookie policy</a>.
+      </p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="btn btn-primary cookie-banner__btn" data-cookie-action="accept">Accept analytics</button>
+        <button type="button" class="btn btn-secondary cookie-banner__btn" data-cookie-action="reject">Reject</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js" defer></script>
+  <script src="js/cookie-consent.js" defer></script>
   <script>document.getElementById('copyright-year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
