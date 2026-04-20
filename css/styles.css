@@ -606,11 +606,104 @@ button.btn.btn-primary {
   background: #0f1419;
 }
 
-.showcase-grid {
+.case-study {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: 2rem;
   margin-top: 2rem;
+  align-items: center;
+  background: #1a2328;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.case-study .mockup-card {
+  align-self: center;
+}
+
+.case-study__content {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-study__media {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.case-study__media:hover {
+  transform: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.case-study:hover {
+  border-color: rgba(75, 162, 138, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.case-study:hover .mockup-overlay {
+  opacity: 1;
+}
+
+.case-study__kicker {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #4ba28a;
+  margin-bottom: 0.5rem;
+}
+
+.case-study__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.case-study__text {
+  color: rgba(230, 232, 235, 0.85);
+  margin-bottom: 1rem;
+}
+
+.case-study__list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  color: rgba(230, 232, 235, 0.85);
+  font-size: 0.9375rem;
+}
+
+.case-study__list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.case-study__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(75, 162, 138, 0.75);
+}
+
+.case-study__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .mockup-card {
@@ -729,6 +822,13 @@ button.btn.btn-primary {
   padding: 1.25rem;
   min-height: 100px;
   background: linear-gradient(180deg, #1a2328 0%, #141c21 100%);
+}
+
+@media (max-width: 900px) {
+  .case-study {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
 }
 
 .mockup-placeholder {
