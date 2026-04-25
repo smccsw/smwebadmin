@@ -572,6 +572,21 @@ button.btn.btn-primary {
   color: rgba(230, 232, 235, 0.8);
 }
 
+/* Section lists (reset-friendly bullets) */
+.section-inner ul {
+  margin: 0 0 1.75rem;
+  padding-left: 1.5rem;
+}
+
+.section-inner ul li {
+  margin: 0.5rem 0;
+  color: rgba(230, 232, 235, 0.85);
+}
+
+.section-inner ul li::marker {
+  color: #4ba28a;
+}
+
 /* Services grid */
 .section--services {
   background: #141c21;
