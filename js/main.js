@@ -3,6 +3,56 @@
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function getTheme() {
+    var t = document.documentElement.dataset.theme;
+    return (t === 'light' || t === 'dark' || t === 'blend') ? t : 'dark';
+  }
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+    syncThemeUi();
+  }
+
+  function syncThemeUi() {
+    var theme = getTheme();
+
+    var toggle = document.querySelector('[data-theme-toggle]');
+    if (toggle) {
+      var nextLabel = theme === 'dark' ? 'light' : (theme === 'light' ? 'blend' : 'dark');
+      toggle.setAttribute('aria-pressed', theme !== 'dark' ? 'true' : 'false');
+      toggle.setAttribute('aria-label', 'Switch to ' + nextLabel + ' mode');
+      var label = toggle.querySelector('.theme-toggle__label');
+      if (label) label.textContent = nextLabel.charAt(0).toUpperCase() + nextLabel.slice(1) + ' mode';
+    }
+
+    var logo = document.getElementById('site-logo');
+    if (logo) {
+      var lightSrc = logo.getAttribute('data-logo-light');
+      var darkSrc = logo.getAttribute('data-logo-dark');
+      var nextSrc = (theme === 'light') ? lightSrc : darkSrc;
+      if (nextSrc && logo.getAttribute('src') !== nextSrc) {
+        logo.setAttribute('src', nextSrc);
+      }
+    }
+
+    var themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+      themeColor.setAttribute('content', theme === 'light' ? '#f6f7f9' : (theme === 'blend' ? '#141c21' : '#0f1419'));
+    }
+  }
+
+  syncThemeUi();
+
+  var themeToggle = document.querySelector('[data-theme-toggle]');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = getTheme();
+      var next = current === 'dark' ? 'light' : (current === 'light' ? 'blend' : 'dark');
+      setTheme(next);
+    });
+  }
+
   // Hero fade-in on load
   function initHero() {
     if (document.querySelector('.hero-content')) {
