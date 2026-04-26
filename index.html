@@ -36,6 +36,16 @@
   <meta name="twitter:description" content="SM Web &amp; Admin — clean, simple websites for small businesses and sole traders. Brochure sites, domains, hosting. Local, human, no fluff." />
   <meta name="twitter:image" content="https://smwebadmin.com/images/logo-black.png" />
   <meta name="twitter:image:alt" content="SM Web &amp; Admin logo" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark' || saved === 'blend') {
+          document.documentElement.dataset.theme = saved;
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link rel="icon" href="images/favicon.ico?v=3" type="image/x-icon" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3" />
@@ -63,15 +73,20 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="SM Web &amp; Admin home">
-        <img src="images/logo-black.svg" alt="SM Web &amp; Admin" width="168" height="84" />
+        <img id="site-logo" src="images/logo-black.svg" data-logo-light="images/logo-black.svg" data-logo-dark="images/logo-white.svg" alt="SM Web &amp; Admin" width="168" height="84" />
       </a>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode">
+        <span class="theme-toggle__label" aria-hidden="true">Light mode</span>
+      </button>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <span class="nav-toggle-inner" aria-hidden="true"><span></span><span></span><span></span></span>
       </button>
       <nav id="main-nav" class="nav" aria-label="Main">
-        <a href="#services">Services</a>
+        <a href="#services">What We Offer</a>
+        <a href="#fit">Who we can help</a>
         <a href="#showcase">What you get</a>
-        <a href="#why">Why us</a>
+        <a href="#process">How we work</a>
+        <a href="#why">Why us?</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -82,7 +97,7 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="hero-kicker">You run the business. We run the web.</p>
-        <h1><span class="hero-line">Small business websites</span><span class="hero-line">Without the faff</span></h1>
+        <h1><span class="hero-line">Small business websites,</span><span class="hero-line">without the faff.</span></h1>
         <p class="hero-lead">Clean, fast brochure websites that help people understand your business, then get in touch with you.</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Get in touch</a>
@@ -126,7 +141,7 @@
       </div>
     </section>
 
-    <section class="section section--fit">
+    <section id="fit" class="section section--fit">
       <div class="section-inner">
         <h2>Who we can help</h2>
         <p class="section-intro">SM Web &amp; Admin is a good fit if you:</p>
@@ -177,7 +192,7 @@
       </div>
     </section>
 
-    <section class="section section--process">
+    <section id="process" class="section section--process">
       <div class="section-inner">
         <h2>How we work</h2>
         <p class="section-intro">We start with a plain-English conversation about what your business needs online. From there, we agree the structure, content, design direction and practical setup — domain, hosting, email links, contact forms, bookings or anything else required.</p>
@@ -187,9 +202,9 @@
 
     <section id="why" class="section section--why">
       <div class="section-inner">
-        <h2>Why go local?</h2>
+        <h2>Why us?</h2>
         <p class="section-intro">If something goes wrong, we know you don't want to spend hours digging through support articles. 
-          You want someone who understands your setup and can help you sort it.</p>
+          You want someone who understands your setup and can help you sort it. Who better than a local business to help local businesses?</p>
         <blockquote class="pullquote">
           Your website should be an asset you control — not something trapped inside a platform you barely understand, with support you can’t reach when it matters.
         </blockquote>
