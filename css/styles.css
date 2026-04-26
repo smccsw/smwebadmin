@@ -1158,6 +1158,26 @@ button.btn.btn-primary {
   color: #e07d2e;
 }
 
+html[data-theme="light"] .cookie-banner__text a {
+  color: #4ba28a;
+}
+
+html[data-theme="light"] .cookie-banner__text a:hover {
+  color: #e07d2e;
+}
+
+html[data-theme="light"] .cookie-banner__btn.btn-secondary {
+  color: rgba(230, 232, 235, 0.95);
+  border-color: rgba(230, 232, 235, 0.75);
+}
+
+html[data-theme="light"] .cookie-banner__btn.btn-secondary:hover {
+  color: rgba(230, 232, 235, 0.95);
+  border-color: #4ba28a;
+  background: rgba(75, 162, 138, 0.18);
+  background-color: rgba(75, 162, 138, 0.18);
+}
+
 .cookie-banner__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1482,6 +1502,10 @@ html[data-theme="light"] .service-card p {
   color: rgba(15, 20, 25, 0.75);
 }
 
+html[data-theme="light"] .service-num {
+  opacity: 1;
+}
+
 html[data-theme="light"] .section--showcase {
   background: #f6f7f9;
 }
@@ -1637,4 +1661,29 @@ html[data-theme="blend"] .site-footer {
 
 html[data-theme="blend"] .site-footer a {
   color: #4ba28a;
+}
+
+/* Blend-mode contrast fixes (WAVE) */
+html[data-theme="blend"] .hero-kicker {
+  color: rgba(230, 232, 235, 0.92);
+}
+
+html[data-theme="blend"] .service-num {
+  color: #1d5366;
+  opacity: 0.9;
+}
+
+html[data-theme="blend"] .case-study__kicker {
+  color: #1d5366;
+}
+
+html[data-theme="blend"] .cookie-banner__btn.btn-secondary {
+  color: rgba(230, 232, 235, 0.95);
+  border-color: rgba(230, 232, 235, 0.75);
+}
+
+html[data-theme="blend"] .cookie-banner__btn.btn-secondary:hover {
+  border-color: #4ba28a;
+  background: rgba(75, 162, 138, 0.18);
+  background-color: rgba(75, 162, 138, 0.18);
 }
