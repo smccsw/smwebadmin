@@ -108,7 +108,8 @@
   var navToggle = document.querySelector('.nav-toggle');
   var mainNav = document.getElementById('main-nav');
   if (navToggle && mainNav) {
-    navToggle.addEventListener('click', function () {
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
       var open = document.body.classList.toggle('nav-open');
       navToggle.setAttribute('aria-expanded', open);
       navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
@@ -119,6 +120,14 @@
         navToggle.setAttribute('aria-expanded', 'false');
         navToggle.setAttribute('aria-label', 'Open menu');
       });
+    });
+    document.addEventListener('click', function (e) {
+      if (!document.body.classList.contains('nav-open')) return;
+      var t = e.target;
+      if (mainNav.contains(t) || navToggle.contains(t)) return;
+      document.body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
     });
   }
 
