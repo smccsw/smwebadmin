@@ -5,7 +5,7 @@
 
   function getTheme() {
     var t = document.documentElement.dataset.theme;
-    return (t === 'light' || t === 'dark' || t === 'blend') ? t : 'dark';
+    return (t === 'light' || t === 'dark' || t === 'blend' || t === 'twilight' || t === 'reef' || t === 'ember') ? t : 'dark';
   }
 
   function setTheme(theme) {
@@ -21,7 +21,7 @@
     if (toggle) {
       toggle.setAttribute('aria-pressed', theme !== 'dark' ? 'true' : 'false');
       var label = toggle.querySelector('.theme-toggle__label');
-      if (label) label.textContent = 'Toggle Colour';
+      if (label) label.textContent = 'Colour swap';
     }
 
     var logo = document.getElementById('site-logo');
@@ -36,7 +36,13 @@
 
     var themeColor = document.querySelector('meta[name="theme-color"]');
     if (themeColor) {
-      themeColor.setAttribute('content', theme === 'light' ? '#f6f7f9' : (theme === 'blend' ? '#141c21' : '#0f1419'));
+      var tc = '#0f1419';
+      if (theme === 'light') tc = '#f6f7f9';
+      else if (theme === 'blend') tc = '#141c21';
+      else if (theme === 'twilight') tc = '#0a1020';
+      else if (theme === 'reef') tc = '#0d1615';
+      else if (theme === 'ember') tc = '#18100c';
+      themeColor.setAttribute('content', tc);
     }
   }
 
@@ -46,7 +52,13 @@
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       var current = getTheme();
-      var next = current === 'dark' ? 'light' : (current === 'light' ? 'blend' : 'dark');
+      var next;
+      if (current === 'dark') next = 'light';
+      else if (current === 'light') next = 'blend';
+      else if (current === 'blend') next = 'twilight';
+      else if (current === 'twilight') next = 'reef';
+      else if (current === 'reef') next = 'ember';
+      else next = 'dark';
       setTheme(next);
     });
   }
