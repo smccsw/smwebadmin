@@ -58,9 +58,9 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
+      <p><a href="faq.html">FAQs</a></p>
       <p><a href="cookie-policy.html">Cookie policy</a></p>
       <p><a href="privacy-policy.html">Privacy policy</a></p>
-      <p><a href="faq.html">FAQs</a></p>
       <p><a href="#" data-cookie-action="settings">Cookie settings</a></p>
       <p class="footer-copy">© <span id="copyright-year"></span> SM Web &amp; Admin. All rights reserved.</p>
     </div>
@@ -81,6 +81,6 @@
   </div>
   <script>document.getElementById('copyright-year').textContent=new Date().getFullYear();</script>
   <script src="js/cookie-consent.js" defer></script>
-  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');if(t&&n){t.addEventListener('click',function(){var o=document.body.classList.toggle('nav-open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});});}})();</script>
+  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');if(!t||!n)return;t.addEventListener('click',function(e){e.stopPropagation();var o=document.body.classList.toggle('nav-open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});});document.addEventListener('click',function(e){if(!document.body.classList.contains('nav-open'))return;var x=e.target;if(n.contains(x)||t.contains(x))return;document.body.classList.remove('nav-open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});})();</script>
 </body>
 </html>
