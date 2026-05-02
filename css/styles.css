@@ -977,9 +977,15 @@ button.btn.btn-primary {
   transition: border-color 0.15s, color 0.15s, transform 0.15s;
 }
 
+.contact-links__btn .fa-solid,
+.contact-links__btn .fa-brands {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
 .contact-links__btn:hover {
-  color: #4ba28a;
-  border-color: #4ba28a;
+  color: #e07d2e;
+  border-color: #e07d2e;
   transform: translateY(-1px);
 }
 
@@ -1429,6 +1435,11 @@ html[data-theme="light"] a:hover {
   color: #c96f22;
 }
 
+/* Primary CTA links: keep dark text on orange hover (beats global link hover specificity) */
+html[data-theme="light"] a.btn-primary:hover {
+  color: #0f1419;
+}
+
 html[data-theme="light"] h1,
 html[data-theme="light"] h2,
 html[data-theme="light"] h3 {
@@ -1578,8 +1589,8 @@ html[data-theme="light"] .contact-links__btn {
 }
 
 html[data-theme="light"] .contact-links__btn:hover {
-  color: #1d5366;
-  border-color: #1d5366;
+  color: #e07d2e;
+  border-color: #e07d2e;
 }
 
 html[data-theme="light"] .site-footer {
