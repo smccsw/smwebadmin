@@ -217,7 +217,9 @@ blockquote {
 }
 
 body.nav-open .nav {
-  max-height: 320px;
+  max-height: min(90vh, 40rem);
+  overflow-x: hidden;
+  overflow-y: auto;
   opacity: 1;
   pointer-events: auto;
   padding-top: 0.75rem;
@@ -1377,7 +1379,9 @@ html[data-theme="light"] .cookie-banner__btn.btn-secondary:hover {
   }
 
   body.nav-open .nav {
-    max-height: 280px;
+    max-height: min(90vh, 40rem);
+    overflow-x: hidden;
+    overflow-y: auto;
     opacity: 1;
     padding-top: 0.75rem;
     margin-top: 0.25rem;
