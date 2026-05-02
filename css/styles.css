@@ -2,9 +2,10 @@
   SM Web & Admin — dark, broody one-pager
   Dark: #0f1419 (bg), #1a2328 (surface), #232f36 (elevated)
   Twilight: #0a1020 (bg), #121c2e (surface) — cool navy / indigo variant
+  Reef: #0d1615 (bg), #142824 (surface) — teal + orange accent-forward
   Accent: #e07d2e (orange), #4ba28a (teal)
   Text: #e6e8eb (primary), rgba(230,232,235,0.8) (muted)
-  Themes cycle: dark → light → blend → twilight → dark (see js/main.js).
+  Themes cycle: dark → light → blend → twilight → reef → dark (see js/main.js).
   Order: tags, classes, IDs (alphabetical within groups).
 */
 
@@ -1236,6 +1237,29 @@ html[data-theme="twilight"] .content-block a:hover {
   color: #e07d2e;
 }
 
+/* Reef: subpages — deep teal shell, cards with teal edge + orange hover */
+html[data-theme="reef"] .page-content {
+  background: #0d1615;
+}
+
+html[data-theme="reef"] .content-block {
+  background: #142824;
+  border-color: rgba(75, 162, 138, 0.22);
+  box-shadow: 0 12px 32px rgba(0, 20, 16, 0.5);
+}
+
+html[data-theme="reef"] .content-block h2 {
+  color: #5ed4b8;
+}
+
+html[data-theme="reef"] .content-block a {
+  color: #4ba28a;
+}
+
+html[data-theme="reef"] .content-block a:hover {
+  color: #f0a060;
+}
+
 /****************************************************/
 /******************* COOKIE BANNER *******************/
 /****************************************************/
@@ -2008,4 +2032,179 @@ html[data-theme="twilight"] .cookie-banner__btn.btn-secondary:hover {
   border-color: #4ba28a;
   background: rgba(75, 162, 138, 0.18);
   background-color: rgba(75, 162, 138, 0.18);
+}
+
+/* Reef theme: teal + orange forward (dark forest base, saturated accents) */
+html[data-theme="reef"] body {
+  color: #e6e8eb;
+  background: #0d1615;
+}
+
+html[data-theme="reef"] .site-header {
+  background: rgba(12, 20, 18, 0.92);
+  border-bottom-color: rgba(75, 162, 138, 0.14);
+}
+
+html[data-theme="reef"] .nav {
+  background: rgba(10, 18, 16, 0.98);
+  border-color: rgba(75, 162, 138, 0.18);
+  box-shadow: 0 18px 50px rgba(0, 24, 18, 0.55);
+}
+
+html[data-theme="reef"] .logo {
+  background: rgba(75, 162, 138, 0.12);
+  border-color: rgba(224, 125, 46, 0.22);
+  box-shadow:
+    0 18px 50px rgba(0, 20, 14, 0.55),
+    inset 0 1px 0 rgba(94, 212, 184, 0.12);
+}
+
+html[data-theme="reef"] .logo::before {
+  background:
+    radial-gradient(circle at 22% 10%, rgba(94, 212, 184, 0.35), transparent 52%),
+    radial-gradient(circle at 88% 92%, rgba(224, 125, 46, 0.28), transparent 58%);
+}
+
+html[data-theme="reef"] .hero-bg {
+  background:
+    radial-gradient(ellipse 85% 65% at 45% 5%, rgba(75, 162, 138, 0.22) 0%, transparent 48%),
+    radial-gradient(ellipse 75% 55% at 90% 80%, rgba(224, 125, 46, 0.22) 0%, transparent 52%),
+    radial-gradient(ellipse 55% 45% at 12% 65%, rgba(240, 160, 96, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0d1615 0%, #10221c 48%, #0d1615 100%);
+}
+
+html[data-theme="reef"] .hero-spotlight {
+  background:
+    radial-gradient(
+      circle 45vmax at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      rgba(224, 125, 46, 0.16) 0%,
+      transparent 44%
+    ),
+    radial-gradient(
+      circle 38vmax at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      rgba(75, 162, 138, 0.22) 0%,
+      transparent 50%
+    );
+}
+
+html[data-theme="reef"] .shape-wrap--1 .shape {
+  background: rgba(75, 162, 138, 0.48);
+}
+
+html[data-theme="reef"] .shape-wrap--2 .shape {
+  background: rgba(224, 125, 46, 0.42);
+}
+
+html[data-theme="reef"] .shape-wrap--3 .shape {
+  background: rgba(94, 212, 184, 0.32);
+}
+
+html[data-theme="reef"] .shape-wrap--4 .shape {
+  background: rgba(75, 162, 138, 0.38);
+}
+
+html[data-theme="reef"] .shape-wrap--5 .shape {
+  background: rgba(240, 160, 96, 0.32);
+}
+
+html[data-theme="reef"] .shape-wrap--6 .shape {
+  background: rgba(224, 125, 46, 0.28);
+}
+
+html[data-theme="reef"] .section--services {
+  background: #10221c;
+}
+
+html[data-theme="reef"] .section--showcase {
+  background: #0a1412;
+}
+
+html[data-theme="reef"] .section--fit {
+  background: #0c1816;
+}
+
+html[data-theme="reef"] .section--why {
+  background: #10221c;
+}
+
+html[data-theme="reef"] .section--cta {
+  background: linear-gradient(180deg, #0a1412 0%, #0e1c18 42%, #122a22 100%);
+}
+
+html[data-theme="reef"] .service-card {
+  background: #142824;
+  border-color: rgba(75, 162, 138, 0.18);
+}
+
+html[data-theme="reef"] .service-card:hover {
+  border-color: rgba(224, 125, 46, 0.45);
+  box-shadow: 0 8px 28px rgba(0, 28, 20, 0.45);
+}
+
+html[data-theme="reef"] .case-study {
+  background: #142824;
+  border-color: rgba(75, 162, 138, 0.16);
+}
+
+html[data-theme="reef"] .case-study:hover {
+  border-color: rgba(224, 125, 46, 0.38);
+  box-shadow: 0 12px 32px rgba(0, 28, 20, 0.45);
+}
+
+html[data-theme="reef"] .mockup-card {
+  background: #142824;
+  border-color: rgba(75, 162, 138, 0.14);
+}
+
+html[data-theme="reef"] .mockup-screen--screenshot {
+  background: #0e1c18;
+}
+
+html[data-theme="reef"] .mockup-screenshot-fallback {
+  background: #0e1c18;
+}
+
+html[data-theme="reef"] .mockup-chrome {
+  background: #1a3630;
+}
+
+html[data-theme="reef"] .mockup-screen {
+  background: linear-gradient(180deg, #142824 0%, #0e1c18 100%);
+}
+
+html[data-theme="reef"] .site-footer {
+  background: #060d0c;
+  border-top-color: rgba(75, 162, 138, 0.12);
+}
+
+html[data-theme="reef"] .site-footer a {
+  color: #5ed4b8;
+}
+
+html[data-theme="reef"] .hero-kicker {
+  color: #5ed4b8;
+}
+
+html[data-theme="reef"] .service-num {
+  color: #f0a060;
+}
+
+html[data-theme="reef"] .case-study__kicker {
+  color: #e07d2e;
+}
+
+html[data-theme="reef"] .cookie-banner__inner {
+  background: rgba(8, 16, 14, 0.98);
+  border-color: rgba(75, 162, 138, 0.16);
+}
+
+html[data-theme="reef"] .cookie-banner__btn.btn-secondary {
+  color: rgba(230, 232, 235, 0.95);
+  border-color: rgba(230, 232, 235, 0.75);
+}
+
+html[data-theme="reef"] .cookie-banner__btn.btn-secondary:hover {
+  border-color: #e07d2e;
+  background: rgba(224, 125, 46, 0.15);
+  background-color: rgba(224, 125, 46, 0.15);
 }
