@@ -956,6 +956,33 @@ button.btn.btn-primary {
   margin-top: 1.5rem;
 }
 
+.contact-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-links__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  border: 2px solid rgba(230, 232, 235, 0.45);
+  color: rgba(230, 232, 235, 0.95);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.contact-links__btn:hover {
+  color: #4ba28a;
+  border-color: #4ba28a;
+  transform: translateY(-1px);
+}
+
 .contact-note {
   margin-top: 1rem;
   font-size: 0.9375rem;
@@ -1543,6 +1570,16 @@ html[data-theme="light"] .section--cta {
 
 html[data-theme="light"] .contact-note {
   color: rgba(15, 20, 25, 0.7);
+}
+
+html[data-theme="light"] .contact-links__btn {
+  border-color: rgba(15, 20, 25, 0.28);
+  color: rgba(15, 20, 25, 0.88);
+}
+
+html[data-theme="light"] .contact-links__btn:hover {
+  color: #1d5366;
+  border-color: #1d5366;
 }
 
 html[data-theme="light"] .site-footer {
