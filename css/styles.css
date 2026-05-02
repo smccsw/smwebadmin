@@ -45,6 +45,10 @@ section[id] {
   scroll-margin-top: 8rem;
 }
 
+.page-content .content-block h3[id] {
+  scroll-margin-top: 8rem;
+}
+
 a {
   color: #e6e8eb;
   text-decoration: none;
