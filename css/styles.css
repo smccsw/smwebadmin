@@ -1866,6 +1866,10 @@ html[data-theme="blend"] .site-footer a {
   color: #4ba28a;
 }
 
+html[data-theme="blend"] .site-footer a:hover {
+  color: #e07d2e;
+}
+
 /* Blend-mode contrast fixes (WAVE) */
 html[data-theme="blend"] .hero-kicker {
   color: rgba(230, 232, 235, 0.92);
@@ -2036,6 +2040,10 @@ html[data-theme="twilight"] .site-footer {
 
 html[data-theme="twilight"] .site-footer a {
   color: #6fc9b4;
+}
+
+html[data-theme="twilight"] .site-footer a:hover {
+  color: #e07d2e;
 }
 
 html[data-theme="twilight"] .hero-kicker {
@@ -2211,6 +2219,10 @@ html[data-theme="reef"] .site-footer {
 
 html[data-theme="reef"] .site-footer a {
   color: #5ed4b8;
+}
+
+html[data-theme="reef"] .site-footer a:hover {
+  color: #e07d2e;
 }
 
 html[data-theme="reef"] .hero-kicker {
@@ -2455,6 +2467,10 @@ html[data-theme="ember"] .site-footer {
 
 html[data-theme="ember"] .site-footer a {
   color: #4ba28a;
+}
+
+html[data-theme="ember"] .site-footer a:hover {
+  color: #e07d2e;
 }
 
 html[data-theme="ember"] .hero-kicker {
