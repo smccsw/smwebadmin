@@ -19,11 +19,9 @@
 
     var toggle = document.querySelector('[data-theme-toggle]');
     if (toggle) {
-      var nextLabel = theme === 'dark' ? 'light' : (theme === 'light' ? 'blend' : 'dark');
       toggle.setAttribute('aria-pressed', theme !== 'dark' ? 'true' : 'false');
-      toggle.setAttribute('aria-label', 'Switch to ' + nextLabel + ' mode');
       var label = toggle.querySelector('.theme-toggle__label');
-      if (label) label.textContent = nextLabel.charAt(0).toUpperCase() + nextLabel.slice(1) + ' mode';
+      if (label) label.textContent = 'Toggle Colour';
     }
 
     var logo = document.getElementById('site-logo');
