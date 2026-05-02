@@ -3,7 +3,7 @@
   Dark: #0f1419 (bg), #1a2328 (surface), #232f36 (elevated)
   Twilight: #0a1020 (bg), #121c2e (surface) — cool navy / indigo variant
   Reef: #0d1615 (bg), #142824 (surface) — teal + orange accent-forward
-  Ember: #18100c (bg) — orange-warm grounds with teal bands (see sections + hero)
+  Ember: warm dark hero/footer; light services + why (#f7f4f1) and white cards like blend
   Accent: #e07d2e (orange), #4ba28a (teal)
   Text: #e6e8eb (primary), rgba(230,232,235,0.8) (muted)
   Themes cycle: dark → light → blend → twilight → reef → ember → dark (see js/main.js).
@@ -1261,29 +1261,35 @@ html[data-theme="reef"] .content-block a:hover {
   color: #f0a060;
 }
 
-/* Ember: subpages — warm shell, card capped with a teal strip */
+/* Ember: subpages — same lift as blend (dark band, white card) */
 html[data-theme="ember"] .page-content {
-  background: #18100c;
+  background: #1a140f;
 }
 
 html[data-theme="ember"] .content-block {
-  background: #241a14;
-  border-color: rgba(224, 125, 46, 0.22);
-  box-shadow:
-    inset 0 3px 0 0 #2d6b5c,
-    0 12px 32px rgba(24, 10, 4, 0.45);
+  background: #ffffff;
+  border-color: rgba(15, 20, 25, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
 }
 
 html[data-theme="ember"] .content-block h2 {
-  color: #f0a060;
+  color: #1d5366;
+}
+
+html[data-theme="ember"] .content-block h3 {
+  color: #0f1419;
+}
+
+html[data-theme="ember"] .content-block p {
+  color: rgba(15, 20, 25, 0.78);
 }
 
 html[data-theme="ember"] .content-block a {
-  color: #4ba28a;
+  color: #1d5366;
 }
 
 html[data-theme="ember"] .content-block a:hover {
-  color: #e07d2e;
+  color: #c96f22;
 }
 
 /****************************************************/
@@ -2320,71 +2326,126 @@ html[data-theme="ember"] .shape-wrap--6 .shape {
   background: rgba(75, 162, 138, 0.24);
 }
 
-html[data-theme="ember"] .section--services {
-  background: #221810;
+/* Ember sections: light bands like blend (warm off-white), dark showcase/fit/cta */
+html[data-theme="ember"] .section--services,
+html[data-theme="ember"] .section--why {
+  background: #f7f4f1;
 }
 
 html[data-theme="ember"] .section--showcase {
-  background: #0f1916;
+  background: #1a140f;
 }
 
 html[data-theme="ember"] .section--fit {
   background: #1c1510;
 }
 
-html[data-theme="ember"] .section--why {
-  background: #111f1c;
+html[data-theme="ember"] .section--cta {
+  background: linear-gradient(180deg, #1c1510 0%, #140e0a 72%, #140e0a 100%);
 }
 
-html[data-theme="ember"] .section--cta {
-  background: linear-gradient(180deg, #1a140f 0%, #0f1916 38%, #0f1916 52%, #221810 100%);
+html[data-theme="ember"] .section--services h2,
+html[data-theme="ember"] .section--why h2 {
+  color: #1d5366;
+}
+
+html[data-theme="ember"] .section--services p,
+html[data-theme="ember"] .section--why p,
+html[data-theme="ember"] .section--services h3,
+html[data-theme="ember"] .section--why blockquote,
+html[data-theme="ember"] .section--services .section-intro,
+html[data-theme="ember"] .section--why .section-intro,
+html[data-theme="ember"] .section--services .pullquote,
+html[data-theme="ember"] .section--why .pullquote {
+  color: rgba(15, 20, 25, 0.82);
+}
+
+html[data-theme="ember"] .section--services .section-inner ul li,
+html[data-theme="ember"] .section--why .section-inner ul li {
+  color: rgba(15, 20, 25, 0.78);
+}
+
+html[data-theme="ember"] .section--fit .section-inner ul li {
+  color: rgba(230, 232, 235, 0.85);
 }
 
 html[data-theme="ember"] .service-card {
-  background: #261c15;
-  border-color: rgba(224, 125, 46, 0.18);
-  box-shadow: inset 0 2px 0 0 rgba(45, 107, 92, 0.65);
+  background: #ffffff;
+  border-color: rgba(15, 20, 25, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme="ember"] .service-card:hover {
-  border-color: rgba(75, 162, 138, 0.45);
-  box-shadow:
-    inset 0 2px 0 0 rgba(45, 107, 92, 0.85),
-    0 8px 28px rgba(40, 12, 0, 0.4);
+  border-color: rgba(75, 162, 138, 0.35);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="ember"] .service-card p {
+  color: rgba(15, 20, 25, 0.75);
+}
+
+html[data-theme="ember"] .service-card h3 {
+  color: #0f1419;
 }
 
 html[data-theme="ember"] .case-study {
-  background: #261c15;
-  border-color: rgba(224, 125, 46, 0.16);
-  box-shadow: inset 0 2px 0 0 rgba(45, 107, 92, 0.55);
+  background: #ffffff;
+  border-color: rgba(15, 20, 25, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
 }
 
 html[data-theme="ember"] .case-study:hover {
-  border-color: rgba(75, 162, 138, 0.4);
-  box-shadow:
-    inset 0 2px 0 0 rgba(45, 107, 92, 0.8),
-    0 12px 32px rgba(40, 12, 0, 0.4);
+  border-color: rgba(75, 162, 138, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+html[data-theme="ember"] .case-study__title {
+  color: #0f1419;
+}
+
+html[data-theme="ember"] .case-study__text {
+  color: rgba(15, 20, 25, 0.75);
+}
+
+html[data-theme="ember"] .case-study__content {
+  color: rgba(15, 20, 25, 0.82);
+}
+
+html[data-theme="ember"] .case-study__list {
+  color: rgba(15, 20, 25, 0.82);
+}
+
+html[data-theme="ember"] .case-study .btn-secondary {
+  color: #0f1419;
+  border-color: rgba(15, 20, 25, 0.35);
+}
+
+html[data-theme="ember"] .case-study .btn-secondary:hover {
+  color: #0f1419;
+  border-color: #4ba28a;
+  background: rgba(75, 162, 138, 0.12);
+  background-color: rgba(75, 162, 138, 0.12);
 }
 
 html[data-theme="ember"] .mockup-card {
-  background: #261c15;
-  border-color: rgba(224, 125, 46, 0.14);
+  background: #ffffff;
+  border-color: rgba(15, 20, 25, 0.08);
 }
 
 html[data-theme="ember"] .mockup-screen--screenshot {
-  background: #1a140f;
+  background: #eceae7;
 }
 
 html[data-theme="ember"] .mockup-screenshot-fallback {
-  background: #1a140f;
+  background: #eceae7;
 }
 
 html[data-theme="ember"] .mockup-chrome {
-  background: #2a2418;
+  background: #ebe8e5;
 }
 
 html[data-theme="ember"] .mockup-screen {
-  background: linear-gradient(180deg, #261c15 0%, #0f1916 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0eeeb 100%);
 }
 
 html[data-theme="ember"] .site-footer {
@@ -2401,11 +2462,12 @@ html[data-theme="ember"] .hero-kicker {
 }
 
 html[data-theme="ember"] .service-num {
-  color: #4ba28a;
+  color: #1d5366;
+  opacity: 0.9;
 }
 
 html[data-theme="ember"] .case-study__kicker {
-  color: #4ba28a;
+  color: #1d5366;
 }
 
 html[data-theme="ember"] .cookie-banner__inner {
