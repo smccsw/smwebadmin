@@ -5,7 +5,7 @@
 
   function getTheme() {
     var t = document.documentElement.dataset.theme;
-    return (t === 'light' || t === 'dark' || t === 'blend' || t === 'twilight' || t === 'reef') ? t : 'dark';
+    return (t === 'light' || t === 'dark' || t === 'blend' || t === 'twilight' || t === 'reef' || t === 'ember') ? t : 'dark';
   }
 
   function setTheme(theme) {
@@ -41,6 +41,7 @@
       else if (theme === 'blend') tc = '#141c21';
       else if (theme === 'twilight') tc = '#0a1020';
       else if (theme === 'reef') tc = '#0d1615';
+      else if (theme === 'ember') tc = '#18100c';
       themeColor.setAttribute('content', tc);
     }
   }
@@ -56,6 +57,7 @@
       else if (current === 'light') next = 'blend';
       else if (current === 'blend') next = 'twilight';
       else if (current === 'twilight') next = 'reef';
+      else if (current === 'reef') next = 'ember';
       else next = 'dark';
       setTheme(next);
     });

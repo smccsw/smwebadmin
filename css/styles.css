@@ -3,9 +3,10 @@
   Dark: #0f1419 (bg), #1a2328 (surface), #232f36 (elevated)
   Twilight: #0a1020 (bg), #121c2e (surface) — cool navy / indigo variant
   Reef: #0d1615 (bg), #142824 (surface) — teal + orange accent-forward
+  Ember: #18100c (bg) — orange-warm grounds with teal bands (see sections + hero)
   Accent: #e07d2e (orange), #4ba28a (teal)
   Text: #e6e8eb (primary), rgba(230,232,235,0.8) (muted)
-  Themes cycle: dark → light → blend → twilight → reef → dark (see js/main.js).
+  Themes cycle: dark → light → blend → twilight → reef → ember → dark (see js/main.js).
   Order: tags, classes, IDs (alphabetical within groups).
 */
 
@@ -1260,6 +1261,31 @@ html[data-theme="reef"] .content-block a:hover {
   color: #f0a060;
 }
 
+/* Ember: subpages — warm shell, card capped with a teal strip */
+html[data-theme="ember"] .page-content {
+  background: #18100c;
+}
+
+html[data-theme="ember"] .content-block {
+  background: #241a14;
+  border-color: rgba(224, 125, 46, 0.22);
+  box-shadow:
+    inset 0 3px 0 0 #2d6b5c,
+    0 12px 32px rgba(24, 10, 4, 0.45);
+}
+
+html[data-theme="ember"] .content-block h2 {
+  color: #f0a060;
+}
+
+html[data-theme="ember"] .content-block a {
+  color: #4ba28a;
+}
+
+html[data-theme="ember"] .content-block a:hover {
+  color: #e07d2e;
+}
+
 /****************************************************/
 /******************* COOKIE BANNER *******************/
 /****************************************************/
@@ -2207,4 +2233,186 @@ html[data-theme="reef"] .cookie-banner__btn.btn-secondary:hover {
   border-color: #e07d2e;
   background: rgba(224, 125, 46, 0.15);
   background-color: rgba(224, 125, 46, 0.15);
+}
+
+/* Ember theme: orange-forward backgrounds, teal stripes / bands for relief */
+html[data-theme="ember"] body {
+  color: #e6e8eb;
+  background: #18100c;
+}
+
+html[data-theme="ember"] .site-header {
+  background: rgba(22, 14, 10, 0.93);
+  border-bottom-color: rgba(224, 125, 46, 0.14);
+}
+
+html[data-theme="ember"] .nav {
+  background: rgba(20, 12, 8, 0.98);
+  border-color: rgba(224, 125, 46, 0.16);
+  box-shadow: 0 18px 50px rgba(40, 12, 0, 0.5);
+}
+
+html[data-theme="ember"] .logo {
+  background: rgba(224, 125, 46, 0.1);
+  border-color: rgba(75, 162, 138, 0.22);
+  box-shadow:
+    0 18px 50px rgba(32, 10, 0, 0.55),
+    inset 0 1px 0 rgba(255, 200, 160, 0.08);
+}
+
+html[data-theme="ember"] .logo::before {
+  background:
+    radial-gradient(circle at 22% 12%, rgba(224, 125, 46, 0.32), transparent 50%),
+    radial-gradient(circle at 85% 90%, rgba(75, 162, 138, 0.2), transparent 55%);
+}
+
+html[data-theme="ember"] .hero-bg {
+  background:
+    radial-gradient(ellipse 95% 72% at 50% -8%, rgba(224, 125, 46, 0.32) 0%, transparent 46%),
+    radial-gradient(ellipse 65% 55% at 5% 95%, rgba(200, 85, 35, 0.22) 0%, transparent 52%),
+    radial-gradient(ellipse 55% 45% at 95% 40%, rgba(75, 162, 138, 0.16) 0%, transparent 50%),
+    linear-gradient(180deg, #1a120e 0%, #1a120e 36%, #0f1916 36%, #0f1916 46%, #1d130f 46%, #16100c 100%);
+}
+
+html[data-theme="ember"] .hero-spotlight {
+  background:
+    radial-gradient(
+      circle 42vmax at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      rgba(224, 125, 46, 0.2) 0%,
+      transparent 44%
+    ),
+    radial-gradient(
+      circle 36vmax at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      rgba(75, 162, 138, 0.16) 0%,
+      transparent 48%
+    );
+}
+
+html[data-theme="ember"] .shape-wrap--1 .shape {
+  background: rgba(224, 125, 46, 0.42);
+}
+
+html[data-theme="ember"] .shape-wrap--2 .shape {
+  background: rgba(75, 162, 138, 0.36);
+}
+
+html[data-theme="ember"] .shape-wrap--3 .shape {
+  background: rgba(240, 160, 96, 0.28);
+}
+
+html[data-theme="ember"] .shape-wrap--4 .shape {
+  background: rgba(75, 162, 138, 0.3);
+}
+
+html[data-theme="ember"] .shape-wrap--5 .shape {
+  background: rgba(224, 125, 46, 0.34);
+}
+
+html[data-theme="ember"] .shape-wrap--6 .shape {
+  background: rgba(94, 212, 184, 0.22);
+}
+
+html[data-theme="ember"] .section--services {
+  background: #221810;
+}
+
+html[data-theme="ember"] .section--showcase {
+  background: #0f1916;
+}
+
+html[data-theme="ember"] .section--fit {
+  background: #1c1510;
+}
+
+html[data-theme="ember"] .section--why {
+  background: #111f1c;
+}
+
+html[data-theme="ember"] .section--cta {
+  background: linear-gradient(180deg, #1a140f 0%, #0f1916 38%, #0f1916 52%, #221810 100%);
+}
+
+html[data-theme="ember"] .service-card {
+  background: #261c15;
+  border-color: rgba(224, 125, 46, 0.18);
+  box-shadow: inset 0 2px 0 0 rgba(45, 107, 92, 0.65);
+}
+
+html[data-theme="ember"] .service-card:hover {
+  border-color: rgba(75, 162, 138, 0.45);
+  box-shadow:
+    inset 0 2px 0 0 rgba(45, 107, 92, 0.85),
+    0 8px 28px rgba(40, 12, 0, 0.4);
+}
+
+html[data-theme="ember"] .case-study {
+  background: #261c15;
+  border-color: rgba(224, 125, 46, 0.16);
+  box-shadow: inset 0 2px 0 0 rgba(45, 107, 92, 0.55);
+}
+
+html[data-theme="ember"] .case-study:hover {
+  border-color: rgba(75, 162, 138, 0.4);
+  box-shadow:
+    inset 0 2px 0 0 rgba(45, 107, 92, 0.8),
+    0 12px 32px rgba(40, 12, 0, 0.4);
+}
+
+html[data-theme="ember"] .mockup-card {
+  background: #261c15;
+  border-color: rgba(224, 125, 46, 0.14);
+}
+
+html[data-theme="ember"] .mockup-screen--screenshot {
+  background: #1a140f;
+}
+
+html[data-theme="ember"] .mockup-screenshot-fallback {
+  background: #1a140f;
+}
+
+html[data-theme="ember"] .mockup-chrome {
+  background: #2a2418;
+}
+
+html[data-theme="ember"] .mockup-screen {
+  background: linear-gradient(180deg, #261c15 0%, #0f1916 100%);
+}
+
+html[data-theme="ember"] .site-footer {
+  background: #0c0806;
+  border-top-color: rgba(75, 162, 138, 0.14);
+}
+
+html[data-theme="ember"] .site-footer a {
+  color: #4ba28a;
+}
+
+html[data-theme="ember"] .hero-kicker {
+  color: #f0a060;
+}
+
+html[data-theme="ember"] .service-num {
+  color: #4ba28a;
+}
+
+html[data-theme="ember"] .case-study__kicker {
+  color: #4ba28a;
+}
+
+html[data-theme="ember"] .cookie-banner__inner {
+  background: rgba(18, 10, 6, 0.98);
+  border-color: rgba(224, 125, 46, 0.18);
+  box-shadow: inset 0 2px 0 0 rgba(45, 107, 92, 0.5);
+}
+
+html[data-theme="ember"] .cookie-banner__btn.btn-secondary {
+  color: rgba(230, 232, 235, 0.95);
+  border-color: rgba(230, 232, 235, 0.75);
+}
+
+html[data-theme="ember"] .cookie-banner__btn.btn-secondary:hover {
+  border-color: #4ba28a;
+  background: rgba(75, 162, 138, 0.16);
+  background-color: rgba(75, 162, 138, 0.16);
 }
