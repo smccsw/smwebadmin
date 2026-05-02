@@ -5,7 +5,7 @@
 
   function getTheme() {
     var t = document.documentElement.dataset.theme;
-    return (t === 'light' || t === 'dark' || t === 'blend') ? t : 'dark';
+    return (t === 'light' || t === 'dark' || t === 'blend' || t === 'twilight') ? t : 'dark';
   }
 
   function setTheme(theme) {
@@ -36,7 +36,7 @@
 
     var themeColor = document.querySelector('meta[name="theme-color"]');
     if (themeColor) {
-      themeColor.setAttribute('content', theme === 'light' ? '#f6f7f9' : (theme === 'blend' ? '#141c21' : '#0f1419'));
+      themeColor.setAttribute('content', theme === 'light' ? '#f6f7f9' : (theme === 'blend' ? '#141c21' : (theme === 'twilight' ? '#0a1020' : '#0f1419')));
     }
   }
 
@@ -46,7 +46,7 @@
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       var current = getTheme();
-      var next = current === 'dark' ? 'light' : (current === 'light' ? 'blend' : 'dark');
+      var next = current === 'dark' ? 'light' : (current === 'light' ? 'blend' : (current === 'blend' ? 'twilight' : 'dark'));
       setTheme(next);
     });
   }

@@ -1,8 +1,10 @@
 /*
   SM Web & Admin — dark, broody one-pager
   Dark: #0f1419 (bg), #1a2328 (surface), #232f36 (elevated)
+  Twilight: #0a1020 (bg), #121c2e (surface) — cool navy / indigo variant
   Accent: #e07d2e (orange), #4ba28a (teal)
   Text: #e6e8eb (primary), rgba(230,232,235,0.8) (muted)
+  Themes cycle: dark → light → blend → twilight → dark (see js/main.js).
   Order: tags, classes, IDs (alphabetical within groups).
 */
 
@@ -1211,6 +1213,29 @@ html[data-theme="blend"] .content-block a:hover {
   color: #c96f22;
 }
 
+/* Twilight: subpages — cool navy shell, slightly lifted cards */
+html[data-theme="twilight"] .page-content {
+  background: #0a1020;
+}
+
+html[data-theme="twilight"] .content-block {
+  background: #121c2e;
+  border-color: rgba(120, 160, 220, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 8, 24, 0.45);
+}
+
+html[data-theme="twilight"] .content-block h2 {
+  color: #b8d4f0;
+}
+
+html[data-theme="twilight"] .content-block a {
+  color: #6fc9b4;
+}
+
+html[data-theme="twilight"] .content-block a:hover {
+  color: #e07d2e;
+}
+
 /****************************************************/
 /******************* COOKIE BANNER *******************/
 /****************************************************/
@@ -1805,6 +1830,181 @@ html[data-theme="blend"] .cookie-banner__btn.btn-secondary {
 }
 
 html[data-theme="blend"] .cookie-banner__btn.btn-secondary:hover {
+  border-color: #4ba28a;
+  background: rgba(75, 162, 138, 0.18);
+  background-color: rgba(75, 162, 138, 0.18);
+}
+
+/* Twilight theme: cool navy / indigo (dark; distinct from warm charcoal default) */
+html[data-theme="twilight"] body {
+  color: #e6e8eb;
+  background: #0a1020;
+}
+
+html[data-theme="twilight"] .site-header {
+  background: rgba(8, 14, 28, 0.92);
+  border-bottom-color: rgba(120, 160, 220, 0.08);
+}
+
+html[data-theme="twilight"] .nav {
+  background: rgba(8, 14, 28, 0.98);
+  border-color: rgba(120, 160, 220, 0.12);
+  box-shadow: 0 18px 50px rgba(0, 8, 32, 0.55);
+}
+
+html[data-theme="twilight"] .logo {
+  background: rgba(100, 140, 200, 0.1);
+  border-color: rgba(120, 160, 220, 0.18);
+  box-shadow:
+    0 18px 50px rgba(0, 8, 32, 0.55),
+    inset 0 1px 0 rgba(180, 210, 255, 0.1);
+}
+
+html[data-theme="twilight"] .logo::before {
+  background:
+    radial-gradient(circle at 20% 12%, rgba(140, 180, 255, 0.22), transparent 55%),
+    radial-gradient(circle at 90% 95%, rgba(75, 162, 138, 0.12), transparent 60%);
+}
+
+html[data-theme="twilight"] .hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(90, 130, 200, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 85% 85%, rgba(120, 90, 200, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 15% 70%, rgba(224, 125, 46, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #0a1020 0%, #0e1528 50%, #0a1020 100%);
+}
+
+html[data-theme="twilight"] .hero-spotlight {
+  background:
+    radial-gradient(
+      circle 45vmax at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      rgba(130, 170, 255, 0.14) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle 38vmax at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      rgba(75, 162, 138, 0.14) 0%,
+      transparent 50%
+    );
+}
+
+html[data-theme="twilight"] .shape-wrap--1 .shape {
+  background: rgba(100, 160, 220, 0.38);
+}
+
+html[data-theme="twilight"] .shape-wrap--2 .shape {
+  background: rgba(160, 120, 220, 0.28);
+}
+
+html[data-theme="twilight"] .shape-wrap--3 .shape {
+  background: rgba(50, 100, 160, 0.32);
+}
+
+html[data-theme="twilight"] .shape-wrap--4 .shape {
+  background: rgba(75, 162, 138, 0.28);
+}
+
+html[data-theme="twilight"] .shape-wrap--5 .shape {
+  background: rgba(120, 100, 200, 0.22);
+}
+
+html[data-theme="twilight"] .shape-wrap--6 .shape {
+  background: rgba(60, 110, 180, 0.26);
+}
+
+html[data-theme="twilight"] .section--services {
+  background: #0d1526;
+}
+
+html[data-theme="twilight"] .section--showcase {
+  background: #080d18;
+}
+
+html[data-theme="twilight"] .section--fit {
+  background: #0a1222;
+}
+
+html[data-theme="twilight"] .section--why {
+  background: #0d1526;
+}
+
+html[data-theme="twilight"] .section--cta {
+  background: linear-gradient(180deg, #080d18 0%, #0d1526 50%, #080d18 100%);
+}
+
+html[data-theme="twilight"] .service-card {
+  background: #121c2e;
+  border-color: rgba(120, 160, 220, 0.1);
+}
+
+html[data-theme="twilight"] .service-card:hover {
+  border-color: rgba(100, 180, 220, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 12, 40, 0.4);
+}
+
+html[data-theme="twilight"] .case-study {
+  background: #121c2e;
+  border-color: rgba(120, 160, 220, 0.1);
+}
+
+html[data-theme="twilight"] .case-study:hover {
+  border-color: rgba(100, 180, 220, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 12, 40, 0.4);
+}
+
+html[data-theme="twilight"] .mockup-card {
+  background: #121c2e;
+  border-color: rgba(120, 160, 220, 0.1);
+}
+
+html[data-theme="twilight"] .mockup-screen--screenshot {
+  background: #0d1526;
+}
+
+html[data-theme="twilight"] .mockup-screenshot-fallback {
+  background: #0d1526;
+}
+
+html[data-theme="twilight"] .mockup-chrome {
+  background: #1a2840;
+}
+
+html[data-theme="twilight"] .mockup-screen {
+  background: linear-gradient(180deg, #121c2e 0%, #0d1526 100%);
+}
+
+html[data-theme="twilight"] .site-footer {
+  background: #060a14;
+  border-top-color: rgba(120, 160, 220, 0.08);
+}
+
+html[data-theme="twilight"] .site-footer a {
+  color: #6fc9b4;
+}
+
+html[data-theme="twilight"] .hero-kicker {
+  color: #8fd4e8;
+}
+
+html[data-theme="twilight"] .service-num {
+  color: #6fc9b4;
+}
+
+html[data-theme="twilight"] .case-study__kicker {
+  color: #8fd4e8;
+}
+
+html[data-theme="twilight"] .cookie-banner__inner {
+  background: rgba(6, 10, 22, 0.98);
+  border-color: rgba(120, 160, 220, 0.1);
+}
+
+html[data-theme="twilight"] .cookie-banner__btn.btn-secondary {
+  color: rgba(230, 232, 235, 0.95);
+  border-color: rgba(230, 232, 235, 0.75);
+}
+
+html[data-theme="twilight"] .cookie-banner__btn.btn-secondary:hover {
   border-color: #4ba28a;
   background: rgba(75, 162, 138, 0.18);
   background-color: rgba(75, 162, 138, 0.18);
