@@ -21,7 +21,7 @@
     if (toggle) {
       toggle.setAttribute('aria-pressed', theme !== 'dark' ? 'true' : 'false');
       var label = toggle.querySelector('.theme-toggle__label');
-      if (label) label.textContent = 'Toggle Colour';
+      if (label) label.textContent = 'Colour swap';
     }
 
     var logo = document.getElementById('site-logo');
