@@ -19,11 +19,9 @@
 
     var toggle = document.querySelector('[data-theme-toggle]');
     if (toggle) {
-      var nextLabel = theme === 'dark' ? 'light' : (theme === 'light' ? 'blend' : 'dark');
       toggle.setAttribute('aria-pressed', theme !== 'dark' ? 'true' : 'false');
-      toggle.setAttribute('aria-label', 'Switch to ' + nextLabel + ' mode');
       var label = toggle.querySelector('.theme-toggle__label');
-      if (label) label.textContent = nextLabel.charAt(0).toUpperCase() + nextLabel.slice(1) + ' mode';
+      if (label) label.textContent = 'Toggle Colour';
     }
 
     var logo = document.getElementById('site-logo');
@@ -138,21 +136,24 @@
   });
 
   // Contact details obfuscation (injected at runtime)
-  var emailElement = document.getElementById('email');
-  if (emailElement) {
+  var contactsHost = document.getElementById('contact-links');
+  if (contactsHost) {
     var emailUser = 'hello';
     var emailDomain = 'smwebadmin.com';
     var emailAddress = emailUser + '@' + emailDomain;
-    emailElement.innerHTML =
-      '<a href="mailto:' + emailAddress + '">' + emailAddress + '</a>';
-  }
+    var telE164 = '+44' + '7624428679';
+    var phoneHref = 'tel:' + telE164;
+    var whatsappHref = 'https://wa.me/' + '447624428679';
+    var phoneLabel =
+      'Call ' + ('07624' + ' ' + '428679') + ', international ' + telE164;
 
-  var phoneElement = document.getElementById('phone');
-  if (phoneElement) {
-    var phoneHref = 'tel:' + '07624' + '428679';
-    phoneElement.innerHTML =
-      '<a class="btn btn-primary" href="' + phoneHref + '">' +
-      'Call ' + '07624' + ' ' + '428679' +
-      '</a>';
+    var iconPhone = '<i class="fa-solid fa-phone" aria-hidden="true"></i>';
+    var iconMail = '<i class="fa-solid fa-envelope" aria-hidden="true"></i>';
+    var iconWhatsApp = '<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>';
+
+    contactsHost.innerHTML =
+      '<a class="contact-links__btn" href="' + phoneHref + '" aria-label="' + phoneLabel + '">' + iconPhone + '</a>' +
+      '<a class="contact-links__btn" href="mailto:' + emailAddress + '" aria-label="Email ' + emailAddress + '">' + iconMail + '</a>' +
+      '<a class="contact-links__btn" href="' + whatsappHref + '" target="_blank" rel="noopener noreferrer" aria-label="Message SM Web Admin on WhatsApp (opens WhatsApp in a new tab)">' + iconWhatsApp + '</a>';
   }
 })();

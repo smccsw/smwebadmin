@@ -956,6 +956,39 @@ button.btn.btn-primary {
   margin-top: 1.5rem;
 }
 
+.contact-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-links__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  border: 2px solid rgba(230, 232, 235, 0.45);
+  color: rgba(230, 232, 235, 0.95);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.contact-links__btn .fa-solid,
+.contact-links__btn .fa-brands {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.contact-links__btn:hover {
+  color: #e07d2e;
+  border-color: #e07d2e;
+  transform: translateY(-1px);
+}
+
 .contact-note {
   margin-top: 1rem;
   font-size: 0.9375rem;
@@ -1402,6 +1435,11 @@ html[data-theme="light"] a:hover {
   color: #c96f22;
 }
 
+/* Primary CTA links: keep dark text on orange hover (beats global link hover specificity) */
+html[data-theme="light"] a.btn-primary:hover {
+  color: #0f1419;
+}
+
 html[data-theme="light"] h1,
 html[data-theme="light"] h2,
 html[data-theme="light"] h3 {
@@ -1543,6 +1581,16 @@ html[data-theme="light"] .section--cta {
 
 html[data-theme="light"] .contact-note {
   color: rgba(15, 20, 25, 0.7);
+}
+
+html[data-theme="light"] .contact-links__btn {
+  border-color: rgba(15, 20, 25, 0.28);
+  color: rgba(15, 20, 25, 0.88);
+}
+
+html[data-theme="light"] .contact-links__btn:hover {
+  color: #e07d2e;
+  border-color: #e07d2e;
 }
 
 html[data-theme="light"] .site-footer {
